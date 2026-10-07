@@ -1,42 +1,9 @@
-# woia-legal-compliance
+# WOIA Legal / Compliance
 
-Portable Agent Plugin for Generic Legal and Compliance coordination of controlled documents, competent decisions and restricted lifecycle evidence..
+Generic department orchestration v0.5.0 with Core >=0.5.3 hard dependency. Coordinates applicable sources, controlled document preparation, competent version-bound decisions, formalization and restricted lifecycle obligations through existing shared providers.
 
-## Capability
+See [method](skills/woia-legal-compliance/SKILL.md) and [contract](skills/woia-legal-compliance/references/contract.md). The pure helper returns readiness or a precise blocker; it does not dispatch effects, establish legal validity, invent law or create a business master. Customer Service alone executes external agent contact. Routine policy-covered controls do not require universal human review.
 
-~~~text
-DISCOVER -> DECIDE -> IMPLEMENT -> VALIDATE -> REPORT
-~~~
+## Local validation
 
-The plugin adapts to the repository it operates on without requiring the consumer to adopt WOIA's authoring toolchain.
-
-## Portable package
-
-~~~text
-plugin.json
-README.md
-CHANGELOG.md
-LICENSE
-skills/**
-# optional source diagnostic when retained by the repository
-CHECKSUMS.sha256
-~~~
-
-`CHECKSUMS.sha256` is optional source evidence, not a required portable/release artifact.
-
-Add `mcp.json` only if the capability genuinely requires MCP.
-
-## Consumer requirements
-
-Document only genuine capability/runtime requirements here. Do not list maintenance Node/pnpm/Mise/Docker unless the portable capability itself truly needs them.
-
-## Development
-
-~~~text
-mise install
-mise run bootstrap
-mise run doctor
-mise run ci:fast
-mise run ci:extended
-mise run release:check
-~~~
+Use mise trust, mise install, mise run bootstrap, mise run doctor, mise run test, mise run ci:fast, then commit the exact candidate and run mise run release:check. Ecosystem v0.5.4 plugin:certify-thin certifies the clean candidate. Host/provider qualification, actual signatures, runtime durability and Operator E2E remain separate and NOT_RUN.
