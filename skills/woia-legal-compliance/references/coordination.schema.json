@@ -1,0 +1,346 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "phase": {
+      "enum": [
+        "scope",
+        "documents",
+        "decision",
+        "formalization",
+        "lifecycle"
+      ]
+    },
+    "operation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "matter_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "organization_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "organization_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "matter_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "not": {
+              "const": "*"
+            }
+          }
+        },
+        "allowed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "organization_ref",
+        "matter_ref",
+        "purpose",
+        "fields",
+        "allowed"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "map_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fresh": {
+          "type": "boolean"
+        },
+        "accepted": {
+          "type": "boolean"
+        },
+        "conflict": {
+          "type": "boolean"
+        },
+        "organization_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "matter_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "map_version",
+        "evidence_ref",
+        "source_version",
+        "fresh",
+        "accepted",
+        "conflict",
+        "organization_ref",
+        "matter_ref"
+      ]
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "permitted": {
+          "type": "boolean"
+        },
+        "grant_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revoked": {
+          "type": "boolean"
+        },
+        "takeover": {
+          "type": "boolean"
+        },
+        "actor_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "organization_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "matter_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operation_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "enum": [
+            "scope",
+            "documents",
+            "decision",
+            "formalization",
+            "lifecycle"
+          ]
+        },
+        "document_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "valid_from": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "valid_until": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "permitted",
+        "grant_ref",
+        "revoked",
+        "takeover",
+        "actor_ref",
+        "organization_ref",
+        "matter_ref",
+        "operation_id",
+        "phase",
+        "document_version",
+        "valid_from",
+        "valid_until"
+      ]
+    },
+    "outcome": {
+      "enum": [
+        "KNOWN",
+        "UNKNOWN"
+      ]
+    },
+    "external_contact": {
+      "type": "boolean"
+    },
+    "applicability": {
+      "enum": [
+        "ACCEPTED",
+        "UNKNOWN"
+      ]
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "template_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "template_accepted": {
+          "type": "boolean"
+        },
+        "checksum": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "actor_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "power_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "competent": {
+          "type": "boolean"
+        },
+        "accepted": {
+          "type": "boolean"
+        },
+        "document_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "material_change": {
+          "type": "boolean"
+        },
+        "revoked": {
+          "type": "boolean"
+        },
+        "independent_review_required": {
+          "type": "boolean"
+        },
+        "reviewer_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewer_competent": {
+          "type": "boolean"
+        },
+        "organization_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "matter_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operation_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "professional_required": {
+      "type": "boolean"
+    },
+    "professional": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "result_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attributable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "retention": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policy_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accepted": {
+          "type": "boolean"
+        },
+        "derivatives_covered": {
+          "type": "boolean"
+        },
+        "hold": {
+          "type": "boolean"
+        },
+        "disposal_requested": {
+          "type": "boolean"
+        },
+        "disposal_authorized": {
+          "type": "boolean"
+        }
+      }
+    },
+    "actor_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluated_at": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    }
+  },
+  "required": [
+    "phase",
+    "operation_id",
+    "matter_ref",
+    "organization_ref",
+    "access",
+    "source",
+    "authority",
+    "outcome",
+    "external_contact",
+    "actor_ref",
+    "evaluated_at"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}
