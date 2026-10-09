@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "woia-legal-compliance",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "Generic Legal and Compliance coordination of controlled documents, competent decisions and restricted lifecycle evidence.",
   "author": {
     "name": "Turpial AI Academy",
