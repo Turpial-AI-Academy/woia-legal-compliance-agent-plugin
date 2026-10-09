@@ -1,12 +1,12 @@
 {
   "schema": "dev.woia.department-orchestrator/v1",
-  "version": "0.5.0",
+  "version": "0.5.6",
   "department": "legal-compliance",
   "execution_model": "legal-compliance-methodology",
   "requires_plugins": [
     {
       "name": "woia-core",
-      "minimum_version": "0.5.3"
+      "minimum_version": "0.5.6"
     }
   ],
   "contracts_directory": "skills/woia-legal-compliance/references",
