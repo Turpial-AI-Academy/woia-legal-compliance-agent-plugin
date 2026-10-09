@@ -1,6 +1,5 @@
 # Generic Legal coordination contract
 
-Accepted method: ADR-0017, ORCH-09 Legal/Compliance review, docs21 provider ownership, docs22 Source Authority, docs24 authority, docs25 engineering/E2E and docs26 permanent graph. No private values or temporary programme attachment is needed at runtime.
 
 Inputs are resolved references, never a new matter/document/business master. Access binds organization + matter + explicit non-wildcard fields + purpose. Source references identify effective map/version/evidence and current accepted conflict-free freshness. A caller must authenticate and authorize these assertions with the source owner; boolean assertions from untrusted content are not proof. Source authority does not grant professional power.
 
