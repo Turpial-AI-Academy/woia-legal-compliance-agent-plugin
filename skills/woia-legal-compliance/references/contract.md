@@ -7,7 +7,7 @@ The pure helper processes scope, documents, decision, formalization and lifecycl
 
 Retention requires accepted policy/decision references and derivative coverage; a held record cannot be disposed, even if disposal was requested. No retention duration or law is hardcoded. Restricted records must stay outside broad search/replies and only authorized minimum result references cross departments. A source date alone creates no deadline.
 
-External contact requests route to Customer Service, never direct send, including signature invitations. Unknown outcomes return RECONCILE with the original operation ID before readiness; retries must reuse the durable operation identity. Revocation/takeover fail closed. The method's own fulfillment does not close a sale, lease, repair, monetary obligation or possession.
+External contact requests route to Customer Service, never direct send, including signature invitations. Unknown outcomes return RECONCILE with the original operation ID before readiness; retries must reuse the durable operation identity. Revocation/takeover fail closed. The method's own fulfillment closes only its Legal contribution; the competent business owner accepts and closes the referenced operation or monetary outcome.
 
 Documents owns identity/checksum/version/access/hold; Compliance records accepted reviews and decisions; Knowledge owns templates/policies; shared domain providers own business lifecycles. Core owns orchestration state and autonomous delivery. Finance owns Ledger/Payments; Legal may request competent contribution but never posts or pays. No universal Legal approval on routine permitted work.
 

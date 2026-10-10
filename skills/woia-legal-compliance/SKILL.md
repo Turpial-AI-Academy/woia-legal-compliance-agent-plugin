@@ -5,7 +5,7 @@ description: Coordinate generic Legal and Compliance matters, controlled documen
 
 # Legal / Compliance methodology
 
-Use one root per organization, department and Project/context. This is a generic method, not a legal engine or a Real Estate specialization. Core 0.5.7 is a hard minimum; use Core Tasks, Due Work, Effects, receiver-owned requests/responses and runtime mechanics. No local case master, scheduler or private envelope extensions.
+Use one root per organization, department and Project/context. Coordinate applicable controls and accepted typed domain references from qualified owners; competent professionals retain their substantive decisions. Core 0.5.7 is a hard minimum; use Core Tasks, Due Work, Effects, receiver-owned requests/responses and runtime mechanics. No local case master, scheduler or private envelope extensions.
 
 ## Five responsibilities
 
